@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 123456
+# MyBatis核心配置（注解式SQL专用）
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # 下划线→驼峰（必须保留，匹配DTO字段）
+  type-aliases-package: com.learning.mysqltest.model  # 可选：给实体类起别名
